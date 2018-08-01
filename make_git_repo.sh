@@ -7,7 +7,7 @@ if [ $# -ne 1 ]; then
      exit 1
 fi
 #Remove any previous github info from director
-/bin/rm -Rf .git
+#/bin/rm -Rf .git
 #set the github username from the command line arguement to the script
 github_username=${1}
 git_directory=` basename "$PWD"`
