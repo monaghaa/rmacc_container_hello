@@ -6,8 +6,9 @@ if [ $# -ne 1 ]; then
      echo "usage: $0 <your-github-username>"
      exit 1
 fi
-#Remove any previous github info from director
-#/bin/rm -Rf .git
+
+#remove existing .git/config file to avoid upload issues
+/bin/rm -Rf .git/config
 #set the github username from the command line arguement to the script
 github_username=${1}
 git_directory=` basename "$PWD"`
